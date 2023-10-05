@@ -1,0 +1,24 @@
+/******************************************************************************
+ *
+ * Module:
+ *
+ * File Name:
+ *
+ * Description:
+ *
+ * Author: Esraa Fawzy
+ *
+ *******************************************************************************/
+#include "lcd.h"
+
+int main(void)
+{
+
+	LCD_init();
+	LCD_moveCursor(0, 3);
+	LCD_displayString("FAN IS OFF");
+
+
+
+
+}

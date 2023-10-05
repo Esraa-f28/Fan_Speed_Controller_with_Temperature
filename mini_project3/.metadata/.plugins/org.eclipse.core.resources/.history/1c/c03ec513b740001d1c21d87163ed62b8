@@ -1,0 +1,35 @@
+/******************************************************************************
+ *
+ * Module:
+ *
+ * File Name:
+ *
+ * Description:
+ *
+ * Author: Esraa Fawzy
+ *
+ *******************************************************************************/
+#include "lcd.h"
+#include"lm35_sensor.h"
+#include"dc_motor.h"
+#include"adc.h"
+
+
+int main(void)
+{
+
+	LCD_init();
+	DcMotor_init();
+	//DcMotor_State state=STOP;
+	DcMotor_Rotate(STOP,0);
+	ADC_ConfigType ADC={INTERNAL,PRE8};
+	ADC_ConfigType * Config_Ptr=&ADC;
+	ADC_init(Config_Ptr);
+	uint8 temp=0;
+	while(1){
+		temp=LM35_getTemperature();
+		DcMotor_Rotate(CLOCKWISE,50);
+	}
+
+
+}

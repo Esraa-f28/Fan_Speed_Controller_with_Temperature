@@ -1,0 +1,31 @@
+/******************************************************************************
+ *
+ * Module:
+ *
+ * File Name:
+ *
+ * Description:
+ *
+ * Author: Esraa Fawzy
+ *
+ *******************************************************************************/
+#include "lcd.h"
+#include"lm35_sensor.h"
+#include"dc_motor.h"
+#include"adc.h"
+
+
+int main(void)
+{
+
+	LCD_init();
+	LCD_displayStringRowColumn(0,2,"My LCD Driver");
+	DcMotor_init();
+	ADC_ConfigType ADC={INTERNAL,PRE8};
+	ADC_init(const ADC_ConfigType * Config_Ptr);
+	while(1){
+	DcMotor_Rotate(CLOCKWISE,50);
+	}
+
+
+}
