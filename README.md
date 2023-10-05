@@ -1,4 +1,4 @@
-# Fan Controller System
+# Fan Speed Controller System
 
 ## Introduction
 
